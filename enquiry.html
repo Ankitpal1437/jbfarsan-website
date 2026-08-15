@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquire — Jairamdas Bhojraj (JB) Farsan</title>
+<meta name="description" content="Bulk orders, distributor enquiries, or a question about JB Farsan — send us a message and we'll get back to you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F2E9; --paper-2:#FFFFFF; --ink:#181310; --ink-soft:#5C4F42; --line:#E4DACB;
+    --red:#C81E1E; --red-dark:#8F1414; --gold:#AD7F35;
+    --display:'Fraunces', serif; --body:'Work Sans', sans-serif; --mono:'Space Mono', monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.5;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:640px;margin:0 auto;padding:0 24px;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(247,242,233,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1240px;margin:0 auto;}
+  .brandmark{display:flex;align-items:center;gap:12px;}
+  .brandmark img{width:38px;height:38px;border-radius:50%;}
+  .brandmark span{font-family:var(--display);font-weight:700;font-size:1.1rem;}
+  .back-link{font-family:var(--mono);font-size:0.75rem;font-weight:700;color:var(--ink-soft);}
+  .back-link:hover{color:var(--red);}
+
+  .hero{padding:60px 0 20px;text-align:center;}
+  .kicker{font-family:var(--mono);font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;}
+  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,5vw,2.7rem);margin-top:12px;letter-spacing:-0.01em;}
+  .hero p{margin-top:14px;color:var(--ink-soft);font-size:1rem;max-width:46ch;margin-left:auto;margin-right:auto;}
+
+  .form-card{background:var(--paper-2);border:1px solid var(--line);border-radius:20px;padding:36px;margin:40px 0;box-shadow:0 4px 20px rgba(24,19,16,0.06);}
+  .field{margin-bottom:22px;}
+  .field label{display:block;font-family:var(--mono);font-size:0.7rem;letter-spacing:1px;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px;font-weight:700;}
+  .field input, .field select, .field textarea{
+    width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:10px;
+    font-family:var(--body);font-size:0.98rem;color:var(--ink);background:var(--paper);
+    transition:border-color .2s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{outline:none;border-color:var(--red);}
+  .field textarea{resize:vertical;min-height:100px;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media (max-width:520px){.field-row{grid-template-columns:1fr;}}
+  .required{color:var(--red);}
+
+  .submit-btn{
+    width:100%;padding:16px;background:#25D366;color:#fff;border:none;border-radius:10px;
+    font-family:var(--mono);font-weight:700;font-size:0.9rem;letter-spacing:0.5px;text-transform:uppercase;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
+    transition:background .2s ease;
+  }
+  .submit-btn:hover{background:#1FAE55;}
+  .submit-btn svg{width:20px;height:20px;}
+
+  .hint{margin-top:14px;text-align:center;font-size:0.82rem;color:var(--ink-soft);}
+
+  .alt-contact{display:flex;justify-content:center;gap:28px;margin:30px 0 60px;flex-wrap:wrap;text-align:center;}
+  .alt-contact div{font-family:var(--mono);font-size:0.8rem;}
+  .alt-contact b{display:block;font-family:var(--display);font-size:1.05rem;color:var(--red);margin-bottom:2px;}
+
+  footer{background:var(--ink);color:rgba(247,242,233,0.7);padding:36px 0;text-align:center;font-family:var(--mono);font-size:0.72rem;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brandmark">
+      <img src="images/jb-logo.png" alt="JB logo">
+      <span>Jairamdas Bhojraj</span>
+    </div>
+    <a class="back-link" href="index.html">← Back to Shop</a>
+  </nav>
+</header>
+
+<section class="hero wrap">
+  <span class="kicker">Get In Touch</span>
+  <h1>Bulk orders, questions, or feedback?</h1>
+  <p>Fill this in and it'll open straight in WhatsApp, pre-filled and ready to send to us — no email, no waiting.</p>
+</section>
+
+<div class="wrap">
+  <div class="form-card">
+    <form id="enquiryForm">
+      <div class="field">
+        <label for="name">Your Name <span class="required">*</span></label>
+        <input type="text" id="name" required placeholder="e.g. Ramesh Patel">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="phone">Phone Number <span class="required">*</span></label>
+          <input type="tel" id="phone" required placeholder="98765 43210">
+        </div>
+        <div class="field">
+          <label for="reason">Enquiry Type <span class="required">*</span></label>
+          <select id="reason" required>
+            <option value="">Select one</option>
+            <option value="Bulk / Wholesale Order">Bulk / Wholesale Order</option>
+            <option value="Distributor / Franchise Enquiry">Distributor / Franchise Enquiry</option>
+            <option value="Custom Order (event/gift)">Custom Order (event/gift)</option>
+            <option value="General Question">General Question</option>
+            <option value="Feedback">Feedback</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message">Your Message <span class="required">*</span></label>
+        <textarea id="message" required placeholder="Tell us what you need — products, quantity, date, or your question..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.02 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 4.99L2 22l5.2-1.36a9.9 9.9 0 0 0 4.82 1.23h.01c5.5 0 9.96-4.46 9.96-9.96S17.52 2 12.02 2zm5.87 14.07c-.25.7-1.45 1.34-2 1.42-.55.09-1.1.13-3.53-.74-2.96-1.08-4.86-4.03-5.01-4.22-.15-.19-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.06.92 2.21.07.15.12.32.02.51-.1.19-.15.3-.3.47-.15.17-.31.37-.44.5-.15.14-.3.3-.13.6.17.3.76 1.25 1.63 2.03 1.12.99 2.06 1.3 2.36 1.45.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.75.83 2.05.98.3.15.5.22.57.35.08.13.08.72-.17 1.42z"/></svg>
+        Send via WhatsApp
+      </button>
+      <p class="hint">Prefer email? Write to us at jbfarsan@gmail.com</p>
+    </form>
+  </div>
+
+  <div class="alt-contact">
+    <div><b>7774083939</b>Shiv Road Shop · 10am–10pm</div>
+    <div><b>9765083939</b>Khemani Shop · 9am–9pm</div>
+  </div>
+</div>
+
+<footer>© JB FARSAN &amp; SWEETS — EST. 1972 · ULHASNAGAR, MAHARASHTRA</footer>
+
+<script>
+document.getElementById('enquiryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const reason = document.getElementById('reason').value;
+  const message = document.getElementById('message').value.trim();
+
+  const text = `Hi JB Farsan, I have an enquiry:%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Type:* ${encodeURIComponent(reason)}%0A*Message:* ${encodeURIComponent(message)}`;
+
+  window.open(`https://wa.me/919765083939?text=${text}`, '_blank');
+});
+</script>
+
+</body>
+</html>
